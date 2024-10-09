@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+    padding: .2rem;
+}
+ .section{
+    height: 20rem;
+    width:25rem;
+    margin: 2rem auto;
+    background-color: yellowgreen;
+}
+.contact{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: .5rem;
+}
+th ,td{
+    border: 2px solid black;
+    padding: 1rem;  
+}
+tr:nth-child(even){
+    background-color: blue;
+}
+tr:hover{
+    background-color: green;
+}
+th{
+    background-color: rgb(6, 61, 38);
+    color: white;
+    text-align: left;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+.flex{
+    height: 10rem;
+    width: 15rem;
+    background-color: yellowgreen;
+
+    /* display: flex*/
+    display: flex;
+   /* flex-direction: column;*/
+   flex-direction: column-reverse;
+   gap: 1rem;
+}
+.flex1{
+    height: 5rem;
+    width: 5rem;
+    background-color: red;
+}
+.flex2{
+    height: 5rem;
+    width: 5rem;
+    background-color: green;
+}

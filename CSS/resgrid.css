@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+     margin: 30px 50px;
+     line-height: 1.5;
+}
+.wrapper{
+    display: grid;
+    gap: 20px;
+}
+.btn{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+}
+.main_nav ul{
+    display: grid;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr  1fr;
+    padding: 0;
+    gap: 20px;
+}
+.main_nav a{
+    background: green;
+    text-decoration: none;
+    color: yellow;
+    padding: .8rem;
+    text-transform: uppercase;
+}
+.main_nav a:hover{
+    background-color: black;
+}
+.top_container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "header header top-box-a"
+    "header header top-box-b";
+}
+.header{
+    grid-area: header;
+    min-height: 400px;
+    background-image: url(../img/20240313_125656.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+}
+.header h1{
+    font-size: 2.5rem;
+    color: whitesmoke;
+    margin-bottom: 0;
+}
+.header p{
+    color: whitesmoke;
+    margin-top: 0;
+}
+.top_box{
+     background-color: rgb(231, 221, 221);
+     align-items: center;
+     justify-items: center;
+     padding: 1rem;
+     display: grid;
+}
+.top-box-a{
+    grid-area: top-box-a;
+}
+.top-box-b{
+    grid-area: top-box-b;
+}
+.Boxes{
+    display: grid;
+    gap: 20px;
+    grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+   /*grid-template-columns: repeat(4, 1fr);*/
+}
+.box{
+    background-color: grey;
+    text-align: center;
+    padding: 1.3rem 2rem;
+    margin-top: 2rem;
+}
+.info{
+    background-color: green;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.img{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+}
+footer{
+    background-color: yellow;
+    color: brown;
+    text-align: center;
+    padding: 1rem;
+}
+@media(max-width:700px){
+    .main_nav ul{
+        grid-template-columns: 1fr;
+    }  
+    .top_container{
+        grid-template-areas:
+        "header header"
+        "top-box-a top-box-b";
+    }
+    .info{
+        grid-template-columns:1fr;
+    } 
+
+}

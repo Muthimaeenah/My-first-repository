@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    display: grid; /*grid helps to group complex container into a simpler group compare to flexbox*/
+    margin: auto;
+    max-width: 980px;
+   /* grid-template-columns: 45% ,20% 35%;*/
+  /* grid-template-columns: 1fr 2fr 1fr;*/
+   grid-template-columns: repeat(3, 1fr);
+   /*grid-template-rows: 200px 100px 400px 200px;*/
+   /*grid-template-rows: repeat(4, 200px);*/
+   grid-template-rows: repeat(4, minmax(200px,auto));/* the auto value will make the grid to expand based on the container content because it is not fixed*/
+   /*minmax (200px,auto) means the minimum will be 200px and the maximum will depend on the container content
+   height is column(vertical), width is rows(horizontal)*/
+   /*column-gap: 10px; this helps to put spacing btween the columns*/
+   /*row-gap: 10px; this helps to put spacing btween the rows*/
+   gap: 10px;/*this function help to put spacing btw both the rows and columns*/
+}
+#container div:nth-child(even){
+    background-color: aqua;
+    text-align: center;
+    padding: 2rem;
+}
+#container div:nth-child(odd){
+    background-color: brown;
+    text-align: center;
+    padding: 2rem;
+}
+#grid{
+    display: grid;
+}

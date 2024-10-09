@@ -1,0 +1,53 @@
+header{
+    color: bisque;
+    background-color: #e08df9;
+    padding: 1rem;
+    height: 25vh;
+}
+.nav{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.head{
+    text-align: center;
+    padding: 5px .3rem;
+    font-size: 1.5rem;
+}
+p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+/*.get-started{
+    text-align: center;
+    padding: 20px .3rem;
+}*/
+label{
+    display: block;
+}
+
+ input, 
+ select,
+  option,
+   textarea{
+    border: 2px dashed white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 7px; 
+    background-color: transparent;
+    color: grey;
+}
+input[type="submit"]{
+       padding: 10px 60px;
+       font-weight: bold;
+       text-align: center;
+       border: none;
+       cursor: pointer;
+       background-color: #e08df9;
+       color: black;
+}
+form{
+    background-color: #25012f;
+    color:white;
+    padding: 20px 0;
+    text-align: center;
+}

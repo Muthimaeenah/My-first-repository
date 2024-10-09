@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 1.5rem;
+    font-family: 'Numito',sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#section_1{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#section_1 div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    display: grid;
+    place-content: center;
+}
+#section_1 div:first-child{
+    background-color: dodgerblue;
+    margin-top: 4rem;
+  /*  transform: translateX(50%);/*translateX moves the container right and left. the positive value of 50% move the container to the right
+    and negative value moves it to the left*/ 
+   /*  transform: rotateX(-130deg); */
+  /*  transform: scaleX(-120%); */
+   transform: skewX(-10deg);
+} 
+#section_1 div:nth-child(2){
+    background-color: yellow;
+   /*  transform: translateY(-2rem); /*translateY moves the container up and down. the positive value of 2rem move the container to the down
+    and negative value moves it up*/ 
+    /* transform: rotateY(180deg); */
+   /*  transform: scaleY(120%); */
+    transform:skewY(10deg);
+}
+#section_1 div:last-child{
+    background-color: limegreen;
+   /*  transform: translate(-100%,-5rem);/*translate(x,y) shorthand property for both translateX and TranslateY*/ 
+   /* transform: rotateZ(78deg); */
+    /* transform: scale(50%, 50%); */
+    transform: skew(-10deg, 10deg);
+}
+/* transition property */
+h4{
+    text-align: center;
+    border-bottom: 2px solid;
+    border-width: 10%;
+    margin: 2rem;
+}
+#section_2{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#section_2 div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    display: grid;
+    place-content: center;
+}
+#section_2 div:first-child{
+    background-color:blueviolet; 
+}
+#section_2 div:nth-child(2){
+    background-color: brown;
+}
+#section_2 div:last-child{
+    background-color: rgba(50, 122, 205, 0.664);
+}
+#section_2 div:hover{
+    background-color: aqua;
+    transition-property: background-color;
+    transition-duration: 2s;
+    /* transition-delay: 0.5s; */
+}
+#section_2 div:hover{
+    background-color: midnightblue;
+    /* transition-property: background-color, transform;
+    transition-duration: 2s, 3s;
+    transition-delay: 0.2s; */
+    /* transition-timing-function: ease;/* (it start slow and speed up then once again slow down)*/ 
+    transition: all 2s linear 0.5s; 
+}
+#section_2 div:last-child:hover{
+    transform: rotate(180deg);
+}
+    .animate{
+        /* animation-name: slide;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s;
+        animation-iteration-count: 5;
+        animation-direction: alternate;
+        animation-fill-mode: forwards; */
+       /*  animation: name duration timing-function delay iteration-count direction fill-mode; */
+       animation: slide 5s ease-in-out 1s 5 alternate forwards;
+    }
+@keyframes slide {
+    0%{
+        transform: translateX((600px) rotate);
+    }
+    33%{
+      transform: translateX((600px) rotate (180deg)); 
+    }
+    66%{
+      transform: translateX((-600px) rotate (-180deg)); 
+    }
+    100%{
+        transform: translateX(0); 
+        }
+}
+
